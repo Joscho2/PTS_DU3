@@ -1,0 +1,9 @@
+Príkazy:
+    next    odsimulovanie nasledujúceho dňa, podľa stavu
+            v akom sa hra nachádza, program môže vykonávať rôzne úlohy
+
+    history vypísanie histórie zápasov
+
+    tables  vypísanie aktuálnych (prípadne tabuľky už skončených) kvalifikácií
+
+    quit    ukončenie programu
