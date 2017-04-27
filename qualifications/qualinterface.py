@@ -2,15 +2,22 @@ class Qualification(object):
 
     """Abstraktná trieda pre všetky kvalifikácie."""
 
-    teams = []
-
-    def __init__(self, simulator, teams):
-        """Nastaví zvolený simulátor zápasov"""
-
-        self.simulator = simulator
-        self.team = teams
-
     def next(self):
         """Odsimulovanie nasledujúceho dňa"""
 
-        raise NotImplementedError( "Should have implemented this" )
+        raise NotImplementedError( 'Should have implemented this' )
+
+    def has_next(self):
+        """Či sa ešte kvalifikácia neskončila. (či existuje ďalší deň)"""
+
+        raise NotImplementedError( 'Should have implemented this' )
+
+    def get_winners(self):
+        """Vrátenie víťazov kvalifikácie"""
+
+        raise NotImplementedError( 'Should have implemented this' )
+
+    def print_table(self):
+        """Vypísanie tabuľky zápasov na stdout"""
+
+        raise NotImplementedError( 'Should have implemented this' )

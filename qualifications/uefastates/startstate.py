@@ -1,12 +1,12 @@
 import math
+import qualifications.uefastates.qualificationstate as qs
 
 class Startstate(object):
     """UEFA - počiatočný stav. Tu sa udeje vygenerovanie tabuľky"""
 
-
     board = [] #List skupin, skupina je list timov, tim je slovnik
 
-    def __init__(self, teams):
+    def __init__(self, teams, simulator):
         counter = 0
 
         #Potichu predpokladáme počet tímov deliteľný 6.
@@ -23,10 +23,21 @@ class Startstate(object):
             counter += 1
             if(counter == max_count): counter = 0
 
+        self.simulator = simulator
+
+    def next(self):
         for group in self.board:
             for j in group:
                 print(str(j), end='\n')
             print('\n')
 
-    def next():
-        pass
+        return qs.QualificationState(self.board, self.simulator)
+
+    def has_next(self):
+        return True
+
+    def print_table(self):
+        for group in self.board:
+            for j in group:
+                print(str(j), end='\n')
+            print('\n')

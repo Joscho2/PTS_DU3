@@ -6,9 +6,16 @@ class Uefa(qual.Qualification):
     """docstring for Uefa."""
 
     def __init__(self, simulator, teams):
-        global state
-        state = startstate.Startstate(teams)
-        super(Uefa, self).__init__(simulator, teams)
+        self.state = startstate.Startstate(teams, simulator)
 
-    def next():
-        pass
+    def next(self):
+        self.state = self.state.next()
+
+    def has_next(self):
+        return self.state.has_next()
+
+    def get_winners(self):
+        return self.state.get_winners()
+
+    def print_table(self):
+        self.state.print_table()
