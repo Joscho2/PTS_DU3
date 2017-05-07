@@ -12,6 +12,10 @@ class Backup(qual.Qualification):
         False
 
     def get_winners(self):
+        
+        """Náhodne vyberie zo 'záložnej'
+        kvalifikácie self.num_of_teams tímov."""
+
         random.shuffle(self.teams)
         winners = []
 
@@ -19,5 +23,6 @@ class Backup(qual.Qualification):
             winners.append(self.teams[t][0])
 
         return winners
+
     def print_table(self):
         pass

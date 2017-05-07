@@ -8,7 +8,8 @@ class Qualification(object):
         raise NotImplementedError( 'Should have implemented this' )
 
     def has_next(self):
-        """Či sa ešte kvalifikácia neskončila. (či existuje ďalší deň)"""
+        """Či sa ešte kvalifikácia neskončila.
+		(či existuje ďalší deň)"""
 
         raise NotImplementedError( 'Should have implemented this' )
 

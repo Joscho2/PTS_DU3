@@ -1,5 +1,9 @@
 class QualificationState(object):
 
+    """Stav UEFA kvalifikácie,
+    v ktorom sa už po dostatní vylosovanej
+    tabuľky deje odohrávanie zápasov."""
+
     def __init__(self, board, simulator):
         self.board = board
         self.simulator = simulator
@@ -11,18 +15,23 @@ class QualificationState(object):
         super(QualificationState, self).__init__()
 
     def print_board(self):
+        """Výpis tabuliek UEFA kvalifikácie."""
         for group in self.board:
             for j in group:
                 print(str(j), end='\n')
             print('\n')
 
     def next(self):
+
+        """Odsimulovanie ďalšieho dňa UEFA kvalifikácie."""
+
         if(self.ended):
-            printf('UEFA kvalifikácia sa skončila')
+            print('UEFA kvalifikácia sa skončila')
         else:
 
             for b in self.board:
                 self.simulator.simulate(b, self.team_a, self.team_b, 'UEFA')
+
             self.print_board()
 
             self.team_b += 1
@@ -32,21 +41,25 @@ class QualificationState(object):
 
             if(self.team_b > 5):
                 self.ended = True
-                print('Koniec kvalifikácie.')
+                print('Koniec kvalifikácie UEFA.')
 
         return self
 
     def has_next(self):
+        """Či existuje záúas na odohranie."""
         return not self.ended
 
     def get_winners(self):
         #Vrátime list tímov, ktoré postúpili na majstrovstvá sveta
         winners = []
         for b in self.board:
-            winners.append(b[0]['name'])
-        #Rusko patrí do UEFA a rusko je host majstrovstiev
+            winners.append(sorted(b, key = lambda team:team['score'], reverse=True)[0]['name'])
+        #Rusko patrí do UEFA a Rusko je host majstrovstiev
         winners.append('Russia')
 
         return winners
+
     def print_table(self):
+        """Zobrazenie tabuliek kvalifikácie.
+        Definované interfaceom."""
         self.print_board()

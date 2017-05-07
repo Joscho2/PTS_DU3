@@ -26,6 +26,10 @@ class Startstate(object):
         self.simulator = simulator
 
     def next(self):
+
+        """Malo by byť zavolané iba raz. Vrátime nový stav,
+        kde sa už budú konať zápasy, dáme mu vygenerovanú tabuľku."""
+
         for group in self.board:
             for j in group:
                 print(str(j), end='\n')
@@ -37,6 +41,9 @@ class Startstate(object):
         return True
 
     def print_table(self):
+
+        """Výpis vygenerovaných tabuliek."""
+
         for group in self.board:
             for j in group:
                 print(str(j), end='\n')

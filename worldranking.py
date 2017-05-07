@@ -4,6 +4,9 @@ class WorldRanking(object):
     teams_world = []
 
     def __init__(self):
+        """Stub verzia WorldRanking systému.
+        Vracia zápasy z každej kvalifikácie"""
+
         f = open('rankingUEFA.txt');
         for line in f:
             line = line.strip('\n')
