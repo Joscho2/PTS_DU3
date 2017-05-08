@@ -5,6 +5,10 @@
   * gamewrapper.py
   * qualifications.backup_qual.py
   * qualifications.uefastates.qualificationstate.py
-* trochu mi chýbaju podrobnejšie komentáre (niečo pred každou funkciou, prípadne zhrnutie)
+* trochu mi chýbaju podrobnejšie komentáre (niečo pred každou funkciou, prípadne zhrnutie):
+  * main.py
+  * worldranking.py
+  * qualifications.uefastates.startstate.py
+  * qualifications.uefastates.qualificationstate.py
 * qualificationstate.py - používaš printf (mne vypisuje, že nemá definované, asi si chcel len print)
 * !!! tabuľky sa nepreusporadúvajú a teda nakoniec sa do finále nevyberú najlepší, ale tí, ktorí v skupine boli najvyššie !!!
