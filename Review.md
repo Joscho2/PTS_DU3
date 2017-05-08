@@ -12,5 +12,4 @@ podľa PEP 8 je max 79 znakov na riadok (prvé tri), no my máme tuším dohodu 
 * ja som bral zadanie ako kvalifikačné zápasy do World Cup, ty máš aj finále
 
 
-* !!! počas World Cup mi z historie nezobrazuje den 17 (prvy den World Cup), no evidentne tam nejake zapasy prebehli !!!
 * !!! tabuľky sa nepreusporadúvajú a teda nakoniec sa do finále nevyberú najlepší, ale tí, ktorí v skupine boli najvyššie !!!
