@@ -7,6 +7,11 @@ class Startstate(object):
     board = [] #List skupin, skupina je list timov, tim je slovnik
 
     def __init__(self, teams, simulator):
+
+        """Konštruktor, v ktorom sa deje rozdelenie týmov
+        do tabuliek ktoré budú všetky pod 'self.board'"""
+
+
         counter = 0
 
         #Potichu predpokladáme počet tímov deliteľný 6.

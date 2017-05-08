@@ -5,10 +5,15 @@ class QualificationState(object):
     tabuľky deje odohrávanie zápasov."""
 
     def __init__(self, board, simulator):
+
+        """Konštruktor, spracovanie tabuľky."""
+
         self.board = board
         self.simulator = simulator
 
         self.ended = False
+
+        #Pripravenie premenných pre simulátor
         self.team_a = 0
         self.team_b = 1
 
@@ -30,10 +35,13 @@ class QualificationState(object):
         else:
 
             for b in self.board:
+                #V každej tabuľke odohrá každý s každým
                 self.simulator.simulate(b, self.team_a, self.team_b, 'UEFA')
 
             self.print_board()
 
+            #Len inkrementovanie premenných pre to aby
+            #hral každý s každým
             self.team_b += 1
             if(self.team_b > 5):
                 self.team_a += 1
@@ -46,7 +54,7 @@ class QualificationState(object):
         return self
 
     def has_next(self):
-        """Či existuje záúas na odohranie."""
+        """Či existuje zápas na odohranie."""
         return not self.ended
 
     def get_winners(self):
