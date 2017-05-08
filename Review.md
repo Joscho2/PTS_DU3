@@ -14,4 +14,5 @@
 * qualificationstate.py - používaš printf (mne vypisuje, že nemá definované, asi si chcel len print)
 * !!! tabuľky sa nepreusporadúvajú a teda nakoniec sa do finále nevyberú najlepší, ale tí, ktorí v skupine boli najvyššie !!!
 
-# Po kontrole som zistil, že sú splnené všetky body z tohto Review.
+
+Po kontrole som zistil, že sú splnené všetky body z tohto Review.
